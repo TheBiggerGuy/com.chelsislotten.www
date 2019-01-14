@@ -1,0 +1,44 @@
+# https://gohugo.io/getting-started/configuration/
+# Site vars (see https://gohugo.io/variables/site/)
+
+baseURL = "https://www.chelsislotten.com/"
+languageCode = "en-us"
+
+title = "Chelsi Slotten"
+copyright = "Chelsi Slotten"
+theme = ""
+
+enableGitInfo = true
+enableRobotsTXT = true
+
+# Fail if "ref" or "relref" can not be resolved
+refLinksErrorLevel = "ERROR"
+
+sectionPagesMenu = "main"
+
+googleAnalytics = "UA-132436004-1"
+
+[author]
+    displayName = "Chelsi Slotten"
+    [social]
+        twitter = "osteoarchaeo"
+
+# Disable all third party for GDPR
+[privacy]
+    [privacy.disqus]
+        disable = true
+    [privacy.googleAnalytics]
+        disable = false
+        AnonymizeIP = true
+    [privacy.instagram]
+        disable = true
+    [privacy.twitter]
+        disable = true
+    [privacy.vimeo]
+        disable = true
+    [privacy.youtube]
+        disable = true
+
+[imaging]
+    resampleFilter = "Lanczos"
+    quality = 90

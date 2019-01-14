@@ -1,0 +1,69 @@
+# Build, test and deploy website via Travis
+
+os: linux
+dist: xenial
+language: generic
+
+branches:
+  except:
+    - gh-pages
+    - /^untagged/
+
+env:
+  global:
+    - HUGO_VERSION=0.53
+    - HUGO_HASH=2cfcdc3a69f23a48a2d1f1042bfac800266c887551801c7a40231b0ba43f5eff
+
+before_install:
+  # Set to fail on errors
+  - set -o errexit && set -o pipefail
+  # Install Hugo
+  - .travis/install_hugo.sh
+  # Install AWS CLI
+  - .travis/install_awscli.sh
+  # Export new tools to PATH
+  - export PATH="${HOME}/.local/bin:${PATH}"
+  # Reset shell
+  - set +o errexit && set +o pipefail
+
+jobs:
+  include:
+    # Build site to test it works
+    - stage: Test
+      script:
+        - hugo -s site
+
+    # Add archive of site to GitHub via releases
+    - stage: Archive
+      if: branch = master AND type != pull_request
+      script:
+        - hugo -s site
+      before_deploy:
+        - tar -czvf public.tar.gz site/public
+      deploy:
+        provider: releases
+        api_key: ${GITHUB_TOKEN}
+        file: public.tar.gz
+        skip_cleanup: true
+
+    # Upload to S3 for public CDN
+    - stage: Deploy
+      if: branch = master AND type != pull_request
+      script:
+        - hugo -s site
+      deploy:
+        provider: s3
+        access_key_id: "${AWS_ACCESS_KEY_ID}"
+        secret_access_key: "${AWS_SECRET_ACCESS_KEY}"
+        bucket: "com.chelsislotten.www"
+        region: us-east-1
+        acl: private
+        local_dir: site/public
+        skip_cleanup: true
+      after_deploy:
+        - aws cloudfront create-invalidation --distribution-id "${AWS_CLOUDFRONT_DISTRIBUTION_ID}" --paths '/*'
+
+cache:
+  directories:
+    - ${HOME}/.local
+

@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ "<!-- Start single main -->" | safeHTML }}
+{{ .Content }}
+{{ "<!-- End single main -->" | safeHTML }}
+    <ul>
+    <!-- Ranges through content/post/*.md -->
+    {{ range .Pages }}
+        <li>
+            <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+        </li>
+    {{ end }}
+    </ul>
+{{ end }}
