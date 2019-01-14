@@ -46,6 +46,23 @@ jobs:
         file: public.tar.gz
         skip_cleanup: true
 
+    # Upload to S3 for public CDN
+    - stage: Deploy
+      if: branch = master AND type != pull_request
+      script:
+        - hugo -s site
+      deploy:
+        provider: s3
+        access_key_id: "${AWS_ACCESS_KEY_ID}"
+        secret_access_key: "${AWS_SECRET_ACCESS_KEY}"
+        bucket: "com.chelsislotten.www"
+        region: us-east-1
+        acl: private
+        local_dir: site/public
+        skip_cleanup: true
+      after_deploy:
+        - aws cloudfront create-invalidation --distribution-id "${AWS_CLOUDFRONT_DISTRIBUTION_ID}" --paths '/*'
+
 cache:
   directories:
     - ${HOME}/.local
