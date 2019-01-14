@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Chelsi Slotten">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Chelsi Slotten</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <style type="text/css">
+        /* GLOBAL STYLES
+        -------------------------------------------------- */
+        /* Padding below the footer and lighter body text */
+
+        body {
+          padding-top: 8.5rem;
+          padding-bottom: 3rem;
+          color: #5a5a5a;
+        }
+
+        body { /* .dont-break-out { */
+          /* These are technically the same, but use both */
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+
+          -ms-word-break: break-all;
+          /* This is the dangerous one in WebKit, as it breaks things wherever */
+          word-break: break-all;
+          /* Instead use this non-standard one: */
+          word-break: break-word;
+
+          /* Adds a hyphen where the word breaks, if supported (No Blink) */
+          -ms-hyphens: auto;
+          -moz-hyphens: auto;
+          -webkit-hyphens: auto;
+          hyphens: auto;
+
+        }
+
+
+        /* MARKETING CONTENT
+        -------------------------------------------------- */
+
+        /* Center align the text within the three columns below the carousel */
+        .marketing .col-lg-4 {
+          margin-bottom: 1.5rem;
+          text-align: center;
+        }
+        .marketing h2 {
+          font-weight: 400;
+        }
+        .marketing .col-lg-4 p {
+          margin-right: .75rem;
+          margin-left: .75rem;
+        }
+
+
+        /* Featurettes
+        ------------------------- */
+
+        .featurette-divider {
+          margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+        }
+
+        /* Thin out the marketing headings */
+        .featurette-heading {
+          font-weight: 300;
+          line-height: 1;
+          letter-spacing: -.05rem;
+        }
+
+
+        /* RESPONSIVE CSS
+        -------------------------------------------------- */
+
+        @media (min-width: 40em) {
+          .featurette-heading {
+            font-size: 50px;
+          }
+        }
+
+        @media (min-width: 62em) {
+          .featurette-heading {
+            margin-top: 7rem;
+          }
+        }
+    </style>
+  </head>
+  <body>
+
+    {{ "<!-- Start header -->" | safeHTML }}
+    {{ partial "header.html" . }}
+    {{ "<!-- End header -->" | safeHTML }}
+
+    <main role="main">
+
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <div class="container marketing">
+
+          {{ "<!-- Start main -->" | safeHTML }}
+          {{- block "main" . }}{{- end }}
+          {{ "<!-- End main -->" | safeHTML }}
+
+      </div><!-- /.container -->
+
+
+      {{ "<!-- Start header -->" | safeHTML }}
+      {{ partial "footer.html" . }}
+      {{ "<!-- End header -->" | safeHTML }}
+
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/popper.min.js" integrity="sha256-qcj5Ssxyt2X1DQyQQ7rk5k486bg5S1IesK0k2Bdyk3I=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+    {{ template "_internal/google_analytics_async.html" . }}
+  </body>
+</html>
