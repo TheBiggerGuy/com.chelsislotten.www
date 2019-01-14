@@ -59,6 +59,11 @@ body { /* .dont-break-out { */
   letter-spacing: -.05rem;
 }
 
+.featurette-image {
+  width: 500px;
+  height: 500px;
+}
+
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
@@ -66,11 +71,5 @@ body { /* .dont-break-out { */
 @media (min-width: 40em) {
   .featurette-heading {
     font-size: 50px;
-  }
-}
-
-@media (min-width: 62em) {
-  .featurette-heading {
-    margin-top: 7rem;
   }
 }
