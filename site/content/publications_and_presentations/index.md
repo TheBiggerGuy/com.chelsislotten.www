@@ -8,9 +8,9 @@ image: "IMG_0278.JPG"
 
 ---
 
-* Slotten, C. (2019, April) Care in the Viking Age.  Paper presented at the annual meeting of the Society for American Archaeology, Albuquerque, NM.
+* Slotten, C. (2019, April). Care in the Viking Age.  Paper presented at the annual meeting of the Society for American Archaeology, Albuquerque, NM.
 
-* Hollinger, E. and Slotten, C. (2018, May) A Sweet Saga: Building a Chocolate Viking Ship. Arctic Studies Center Newsletter, 25, 60-61.
+* Hollinger, E. and Slotten, C. (2018, May). A Sweet Saga: Building a Chocolate Viking Ship. Arctic Studies Center Newsletter, 25, 60-61.
 
 * Slotten, C. (2018, February). The Unintended Afterlife of Female Vikings.  Paper presented at the 2018 Wolf Humanities Center Graduate Student Conference at the University of Pennsylvania.
 
@@ -32,7 +32,7 @@ image: "IMG_0278.JPG"
 
 * Slotten, C. and Parlato, N. (2017, June 29). ICASS IX- Umea, Sweden June 8-12, 2017 [Blog post].  Retrieved from https://nmnh.typepad.com/arctic_studies/2017/06/icass-ix-umea-sweden-june-8-12-2017.html
 
-* Parlato, N., I. Krupnik, and C. Slotten. (2017, June) Building and International Guide to Online Arctic Ethnographic Collections. Paper presented at the ICASS IX meeting, Umea, Sweden.
+* Parlato, N., I. Krupnik, and C. Slotten. (2017, June). Building and International Guide to Online Arctic Ethnographic Collections. Paper presented at the ICASS IX meeting, Umea, Sweden.
 
 * Slotten, C. (2017, May).  A Year at the ASC.  Arctic Studies Center Newsletter, 24, 56-57.
 
