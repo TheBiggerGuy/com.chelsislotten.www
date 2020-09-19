@@ -8,6 +8,8 @@ image: "IMG_0278.JPG"
 
 ---
 
+* Slotten, C. (2019, April) Care in the Viking Age.  Paper presented at the annual meeting of the Society for American Archaeology, Albuquerque, NM.
+
 * Hollinger, E. and Slotten, C. (2018, May) A Sweet Saga: Building a Chocolate Viking Ship. Arctic Studies Center Newsletter, 25, 60-61.
 
 * Slotten, C. (2018, February). The Unintended Afterlife of Female Vikings.  Paper presented at the 2018 Wolf Humanities Center Graduate Student Conference at the University of Pennsylvania.
