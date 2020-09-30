@@ -42,3 +42,8 @@ googleAnalytics = "UA-132436004-1"
 [imaging]
     resampleFilter = "Lanczos"
     quality = 90
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
