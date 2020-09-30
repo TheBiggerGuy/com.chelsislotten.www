@@ -1,2 +1,7 @@
 site/public
 site/resources
+
+/.local
+
+*.sublime-project
+*.sublime-workspace
