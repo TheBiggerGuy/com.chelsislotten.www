@@ -8,6 +8,8 @@ image: "IMG_0278.JPG"
 
 ---
 
+* Slotten, C. (2020). Daughters of Freya, Sons of Odin: Gendered Lives during the Viking Age (Unpublished doctoral dissertation). American University, Washington DC. https://search.proquest.com/openview/5348d101d03438aa35916572deffaf64
+
 * Slotten, C. (2019, April). Care in the Viking Age.  Paper presented at the annual meeting of the Society for American Archaeology, Albuquerque, NM.
 
 * Hollinger, E. and Slotten, C. (2018, May). A Sweet Saga: Building a Chocolate Viking Ship. Arctic Studies Center Newsletter, 25, 60-61.
