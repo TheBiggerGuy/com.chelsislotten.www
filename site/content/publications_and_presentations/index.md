@@ -8,6 +8,8 @@ image: "IMG_0278.JPG"
 
 ---
 
+* Slotten, C. (2021). To Slay or Not to Slay: Gender, Liminality, and Choice in Buffy the Vampire Slayer. In R. Gibson and J.M. VanderVeen(eds), Gender, Supernatural Beings, and the Liminality of Death (67-84). Lexington. 
+
 * Slotten, C. (2020). Daughters of Freya, Sons of Odin: Gendered Lives during the Viking Age (Unpublished doctoral dissertation). American University, Washington DC. https://search.proquest.com/openview/5348d101d03438aa35916572deffaf64
 
 * Slotten, C. (2019, April). Care in the Viking Age.  Paper presented at the annual meeting of the Society for American Archaeology, Albuquerque, NM.
