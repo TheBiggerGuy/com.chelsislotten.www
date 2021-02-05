@@ -16,6 +16,8 @@ image: "IMG_0278.JPG"
 
 * Hollinger, E. and Slotten, C. (2018, May). A Sweet Saga: Building a Chocolate Viking Ship. Arctic Studies Center Newsletter, 25, 60-61.
 
+* Slotten, C. (2018, March). Podcasting and Public Anthropology.  Paper presented at Middle Atlantic Archeological Conference, Virginia Beach, VA.
+
 * Slotten, C. (2018, February). The Unintended Afterlife of Female Vikings.  Paper presented at the 2018 Wolf Humanities Center Graduate Student Conference at the University of Pennsylvania.
 
 * Wesp, J., F. Gaitan, J.L. Guerrero and C. Slotten. (2018, January). Through the Priest’s Ear: Examining    the History and Archaeology of San Ignacio’s Jesuit Church (1610-2017) –Bogotá, Colombia. Paper presented at the annual meeting of the Society of Historic Archaeology, New Orleans, LA.
