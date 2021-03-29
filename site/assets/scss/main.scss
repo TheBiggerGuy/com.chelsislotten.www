@@ -56,19 +56,12 @@ $navbar-dark-brand-hover-color: rgba($chelsi-orange, .9);
 // Utilities
 @import "../../../bootstrap/scss/utilities/api";
 
-/* GLOBAL STYLES
+/* GLOBAL
 -------------------------------------------------- */
-/* Padding below the footer and lighter body text */
 
 $large-pad: 4rem;
 
-body {
-  padding-top: ($large-pad * 1.6);
-  padding-bottom: ($large-pad * 0.5);
-  color: $chelsi-blue;
-}
-
-body { /* .dont-break-out { */
+@mixin enable-word-break {
   /* These are technically the same, but use both */
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -84,8 +77,21 @@ body { /* .dont-break-out { */
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
-
 }
+
+body {
+  padding-top: ($large-pad * 1.6);
+  padding-bottom: ($large-pad * 0.5);
+  color: $chelsi-blue;
+}
+
+a {
+  @include enable-word-break;
+}
+
+
+/* NAVBAR
+-------------------------------------------------- */
 
 header {
   nav {
