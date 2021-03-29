@@ -12,6 +12,9 @@ $info: $chelsi-orange;
 $body-bg: $chelsi-gray;
 $body-color: $chelsi-orange;
 
+$navbar-dark-brand-color: $chelsi-orange;
+$navbar-dark-brand-hover-color: rgba($chelsi-orange, .9);
+
 @import "../../../bootstrap/scss/variables";
 @import "../../../bootstrap/scss/mixins";
 @import "../../../bootstrap/scss/utilities";
@@ -25,7 +28,7 @@ $body-color: $chelsi-orange;
 // @import "../../../bootstrap/scss/tables";
 // @import "../../../bootstrap/scss/forms";
 @import "../../../bootstrap/scss/buttons";
-// @import "../../../bootstrap/scss/transitions";
+@import "../../../bootstrap/scss/transitions";
 @import "../../../bootstrap/scss/dropdown";
 // @import "../../../bootstrap/scss/button-group";
 @import "../../../bootstrap/scss/nav";
@@ -82,6 +85,15 @@ body { /* .dont-break-out { */
   -webkit-hyphens: auto;
   hyphens: auto;
 
+}
+
+header {
+  nav {
+    @extend .navbar;
+    @extend .navbar-dark;
+    @extend .bg-primary;
+    @extend .fixed-top;
+  }
 }
 
 
