@@ -1,7 +1,7 @@
 ---
 title: "Podcast"
 subtitle: "The Women in Archaeology Podcast"
-description: "Women In Archaeology: Archaeology About, For, and By Women in the Field."
+description: "Women In Archaeology: Archaeology About, For, and By Women in the Field"
 date: 2019-01-14T14:38:43+01:00
 
 image: "cropped-wia_sticker_official1.jpg"

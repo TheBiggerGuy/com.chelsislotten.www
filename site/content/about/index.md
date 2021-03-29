@@ -1,7 +1,7 @@
 ---
 title: "About Me"
-subtitle: "About"
-description: "Research Assistant at Smithsonian Institution, National Museum of Natural History."
+subtitle: "Hello!"
+description: "Passionately linking users and audiences to engaging digital and real world experiences"
 date: 2019-01-14T14:38:43+01:00
 
 image: "head_shot.jpeg"
@@ -9,5 +9,17 @@ image: "head_shot.jpeg"
 ---
 
 <p class="lead">
-    Chelsi Slotten recieved her PhD in anthropology from American University. She received her BA from Tulane University in New Orleans where she studied human osteology, forensics, and the classics. She then went on to complete her MSc in paleopathology at Durham University in England. Her research there focused on recognizing victims of domestic abuse in the archaeological record and identifying social, religious, political, and economic factors contributing to different prevalence rates between urban and rural populations. Her current research interests include how gender influences bioarchaeology, nutritional access, health frailty, and trauma during the Viking Era. Her dissertation analyzed how gender shaped individuals lived experiences during the Danish Viking Age. She also has a passion for understanding with how the public engages with the past, particularly at museums, online, and through podcasts.
+	I believe that people should have the best experience possible when learning and engaging with new materials - no matter their previous experience, background knowledge, or technical skills. That's why I am passionate about helping museums, companies, and learning platforms provide engaging and inclusive user experiences across their platforms, whether through social media posts, websites, podcasts, exhibitions, or museum public outreach.
+</p>
+<p class="lead">
+	But how does one ensure that? By putting potential users at the center of everything and by executing projects based around what the user wants and needs. And, making sure that consumers see people like them in the materials they are consuming - because representation is key when it comes to being inclusive. In addition to creating a more equitable world, it also promotes new and inventive thinking that will result in a better overall experience.
+</p>
+<p class="lead">
+	I studied at American University where I completed a PhD in Anthropology in 2020. When I’m not working, I can be found dancing (in the pre-COVID-19 times), sewing, learning Danish, and playing with my dog. I am also a co-founder and co-host of the <em>Women in Archaeology</em> podcast with several of my colleagues.
+</p>
+<p class="lead">
+	Feel free to reach out!
+</p>
+<p class="lead">
+	<em>~ Chelsi</em>
 </p>
