@@ -1,18 +1,68 @@
 @import "../../../bootstrap/scss/functions";
-@import "../../../bootstrap/scss/variables";
 
 // variables
+$chelsi-orange: #E8634E;
+$chelsi-gray: #DBDBDB;
+$chelsi-blue: #002E5D;
 
-@import "../../../bootstrap/scss/bootstrap";
+$primary: $chelsi-blue;
+$secondary: $chelsi-gray;
+$info: $chelsi-orange;
+
+$body-bg: $chelsi-gray;
+$body-color: $chelsi-orange;
+
+@import "../../../bootstrap/scss/variables";
+@import "../../../bootstrap/scss/mixins";
+@import "../../../bootstrap/scss/utilities";
+
+@import "../../../bootstrap/scss/root";
+@import "../../../bootstrap/scss/reboot";
+@import "../../../bootstrap/scss/type";
+@import "../../../bootstrap/scss/images";
+@import "../../../bootstrap/scss/containers";
+@import "../../../bootstrap/scss/grid";
+// @import "../../../bootstrap/scss/tables";
+// @import "../../../bootstrap/scss/forms";
+@import "../../../bootstrap/scss/buttons";
+// @import "../../../bootstrap/scss/transitions";
+@import "../../../bootstrap/scss/dropdown";
+// @import "../../../bootstrap/scss/button-group";
+@import "../../../bootstrap/scss/nav";
+@import "../../../bootstrap/scss/navbar";
+// @import "../../../bootstrap/scss/card";
+// @import "../../../bootstrap/scss/accordion";
+// @import "../../../bootstrap/scss/breadcrumb";
+// @import "../../../bootstrap/scss/pagination";
+// @import "../../../bootstrap/scss/badge";
+// @import "../../../bootstrap/scss/alert";
+// @import "../../../bootstrap/scss/progress";
+// @import "../../../bootstrap/scss/list-group";
+// @import "../../../bootstrap/scss/close";
+// @import "../../../bootstrap/scss/toasts";
+// @import "../../../bootstrap/scss/modal";
+// @import "../../../bootstrap/scss/tooltip";
+// @import "../../../bootstrap/scss/popover";
+// @import "../../../bootstrap/scss/carousel";
+// @import "../../../bootstrap/scss/spinners";
+// @import "../../../bootstrap/scss/offcanvas";
+
+// Helpers
+@import "../../../bootstrap/scss/helpers";
+
+// Utilities
+@import "../../../bootstrap/scss/utilities/api";
 
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
+$large-pad: 4rem;
+
 body {
-  padding-top: 8.5rem;
-  padding-bottom: 3rem;
-  color: #5a5a5a;
+  padding-top: ($large-pad * 1.6);
+  padding-bottom: ($large-pad * 0.5);
+  color: $chelsi-blue;
 }
 
 body { /* .dont-break-out { */
@@ -40,7 +90,6 @@ body { /* .dont-break-out { */
 
 /* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
-  margin-bottom: 1.5rem;
   text-align: center;
 }
 .marketing h2 {
@@ -56,7 +105,7 @@ body { /* .dont-break-out { */
 ------------------------- */
 
 .featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  margin: $large-pad 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
