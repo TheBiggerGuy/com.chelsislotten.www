@@ -1,6 +1,7 @@
 <header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+  <!-- Mobile Nav -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary d-lg-none">
+    <a class="navbar-brand text-info" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -13,5 +14,10 @@
         {{ end }}
       </ul>
     </div>
+  </nav>
+
+  <!-- Desktop Nav -->
+  <nav class="navbar fixed-top navbar-expand-md navbar-dark fixed-top bg-primary d-none d-lg-block">
+    <a class="navbar-brand text-info" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
   </nav>
 </header>
