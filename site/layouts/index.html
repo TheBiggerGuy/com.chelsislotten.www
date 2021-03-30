@@ -12,7 +12,7 @@
     {{ if ne $image.ResourceType "image" }}{{ errorf "Image ResourceType not jpg: %s %s" .Path $image.ResourceType }}{{ end }}
     {{ $image_resized := $image.Fit "140x140" }}
     <div class="col-lg-4 text-secondary">
-      <img class="rounded-circle" src="{{ $image_resized.Permalink }}" alt="Generic placeholder image" width="140" height="140">
+      <img class="rounded-circle" src="{{ $image_resized.Permalink }}" {{with $page.Params.image_alt}}alt="{{.}}"{{end}} width="140" height="140">
       <h2>{{ $page.Title }}</h2>
       <p>{{ $page.Description }}</p>
       <a class="btn btn-info" href="#{{ anchorize $page.Title }}" role="button">View details &raquo;</a>
@@ -30,7 +30,7 @@
   {{ $image_resized := $image.Fit "500x500" }}
   <div class="row featurette" id="{{ anchorize $page.Title }}">
     <div class="col-md-5 {{if (modBool $index 2)}}order-md-2{{end}} mb-2">
-      <img class="img-fluid mx-auto" src="{{ $image_resized.Permalink }}">
+      <img class="img-fluid mx-auto" src="{{ $image_resized.Permalink }}" {{with $page.Params.image_alt}}alt="{{.}}"{{end}}>
     </div>
     <div class="col-md-7 {{if (modBool $index 2)}}order-md-1{{end}}">
       <h2 class="featurette-heading">{{ $page.Params.subtitle }}</h2>

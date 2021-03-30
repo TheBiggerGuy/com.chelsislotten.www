@@ -5,6 +5,7 @@ description: "Women In Archaeology: Archaeology About, For, and By Women in the 
 date: 2019-01-14T14:38:43+01:00
 
 image: "cropped-wia_sticker_official1.jpg"
+image_alt: "Women in Archaeology logo"
 
 ---
 
