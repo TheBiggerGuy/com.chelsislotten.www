@@ -47,3 +47,6 @@ googleAnalytics = "UA-132436004-1"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[params]
+    description = "Dr Chelsi Slotten: anthropologist, researcher, and accessibility advocate."
