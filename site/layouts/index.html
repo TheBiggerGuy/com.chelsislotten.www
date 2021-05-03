@@ -10,9 +10,13 @@
     {{ $image_name := $page.Params.image }}
     {{ $image := $page.Resources.GetMatch $image_name }}
     {{ if ne $image.ResourceType "image" }}{{ errorf "Image ResourceType not jpg: %s %s" .Path $image.ResourceType }}{{ end }}
-    {{ $image_resized := $image.Fit "140x140" }}
+    {{ $image_resized_jpg := $image.Fit "140x140 jpg" }}
+    {{ $image_resized_webp := $image.Fit "140x140 webp q80" }}
     <div class="col-lg-4 text-secondary">
-      <img class="rounded-circle" src="{{ $image_resized.Permalink }}" {{with $page.Params.image_alt}}alt="{{.}}"{{end}} width="140" height="140">
+      <picture>
+        <source srcset="{{ $image_resized_webp.Permalink }}" type="image/webp">
+        <img class="rounded-circle" src="{{ $image_resized_jpg.Permalink }}" {{with $page.Params.image_alt}}alt="{{.}}"{{end}} width="140" height="140">
+      </picture>
       <h2>{{ $page.Title }}</h2>
       <p>{{ $page.Description }}</p>
       <a class="btn btn-info" href="#{{ anchorize $page.Title }}" role="button">View details &raquo;</a>
@@ -27,10 +31,14 @@
   {{ $image_name := $page.Params.image }}
   {{ $image := $page.Resources.GetMatch $image_name }}
   {{ if ne $image.ResourceType "image" }}{{ errorf "Image ResourceType not jpg: %s %s" .Path $image.ResourceType }}{{ end }}
-  {{ $image_resized := $image.Fit "500x500" }}
+  {{ $image_resized_jpg := $image.Fit "500x500 jpg" }}
+  {{ $image_resized_webp := $image.Fit "500x500 webp q80" }}
   <div class="row featurette" id="{{ anchorize $page.Title }}">
     <div class="col-md-5 {{if (modBool $index 2)}}order-md-2{{end}} mb-2">
-      <img class="img-fluid mx-auto border border-primary border-3" src="{{ $image_resized.Permalink }}" {{with $page.Params.image_alt}}alt="{{.}}"{{end}}>
+      <picture>
+        <source srcset="{{ $image_resized_webp.Permalink }}" type="image/webp">
+        <img class="img-fluid mx-auto border border-primary border-3" src="{{ $image_resized_jpg.Permalink }}" {{with $page.Params.image_alt}}alt="{{.}}"{{end}}>
+      </picture>
     </div>
     <div class="col-md-7 {{if (modBool $index 2)}}order-md-1{{end}}">
       <h2 class="featurette-heading">{{ $page.Params.subtitle }}</h2>
