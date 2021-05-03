@@ -1,7 +1,10 @@
 <header>
   <nav>
     <div class="container-fluid">
-      <a class="navbar-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+      <a class="navbar-brand" href="{{ .Site.BaseURL }}">
+        <img src="/apple-touch-icon.png" alt="" width="24" height="24" class="d-inline-block align-text-top">
+        {{ .Site.Title }}
+      </a>
       <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
