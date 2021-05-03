@@ -17,9 +17,19 @@
         <source srcset="{{ $image_resized_webp.Permalink }}" type="image/webp">
         <img class="rounded-circle" src="{{ $image_resized_jpg.Permalink }}" {{with $page.Params.image_alt}}alt="{{.}}"{{end}} width="140" height="140">
       </picture>
+    </div><!-- /.col-lg-4 -->
+  {{ end }}
+  {{ range $page := .Pages }}
+    <div class="col-lg-4 text-secondary">
       <h2>{{ $page.Title }}</h2>
       <p>{{ $page.Description }}</p>
-      <a class="btn btn-info" href="#{{ anchorize $page.Title }}" role="button">View details &raquo;</a>
+    </div><!-- /.col-lg-4 -->
+  {{ end }}
+  {{ range $page := .Pages }}
+    <div class="col-lg-4 text-secondary">
+      <div class="align-text-bottom h-100">
+        <a class="btn btn-info align-text-bottom" href="#{{ anchorize $page.Title }}" role="button">View details &raquo;</a>
+      </div>
     </div><!-- /.col-lg-4 -->
   {{ end }}
 </div><!-- /.row -->
