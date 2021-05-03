@@ -3,14 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ .Site.Title }}</title>
     <meta name="description" content="{{ $.Site.Params.description }}">
     <meta name="author" content="Chelsi Slotten">
     <link rel="icon" href="favicon.ico">
 
-    <title>{{ .Site.Title }}</title>
+    <meta name="theme-color" content="#002E5D"/>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <!-- Icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/brands.css" integrity="sha384-V5Z1KgRRJyY878qCx7+zUeTDm0FgjoYrbmSortFqRPGz+Ue6XDe4uIiMqB3tB/wd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/fontawesome.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+
 
     {{ "<!-- Custom styles for this template -->" | safeHTML }}
     {{- with resources.Get "scss/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint "sha256" }}
@@ -44,9 +49,7 @@
 
     </main>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Bootstrap core JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta3/js/bootstrap.bundle.min.js" integrity="sha512-DSdiuNZtfUhehZHXtit9Sa/83i06YSnvT8Js8drwdkVCDMk3JwpIxdhf2oRUByUDB3wguN2iAzoTNfxFAuqGyA==" crossorigin="anonymous"></script>
     {{ template "_internal/google_analytics_async.html" . }}
   </body>

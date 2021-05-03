@@ -37,7 +37,7 @@
     <div class="col-md-5 {{if (modBool $index 2)}}order-md-2{{end}} mb-2">
       <picture>
         <source srcset="{{ $image_resized_webp.Permalink }}" type="image/webp">
-        <img class="img-fluid mx-auto border border-primary border-3" src="{{ $image_resized_jpg.Permalink }}" {{with $page.Params.image_alt}}alt="{{.}}"{{end}}>
+        <img class="img-fluid mx-auto border border-primary border-3" src="{{ $image_resized_jpg.Permalink }}" {{with $page.Params.image_alt}}alt="{{.}}"{{end}} width="500" height="500">
       </picture>
     </div>
     <div class="col-md-7 {{if (modBool $index 2)}}order-md-1{{end}}">
