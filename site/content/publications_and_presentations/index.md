@@ -9,6 +9,8 @@ image_alt: "Chelsi presenting at a departmental seminar"
 
 ---
 
+* Slotten, C. (Forthcoming). Podcasting as Public Archaeology.  Journal of Community Archaeology & Heritage
+
 * Slotten, C. (2021, April 27). Listener Survey Results from the Women in Archaeology Podcast [Blog post]. Retrieved from https://womeninarchaeology.com/2021/04/27/podcast-listener-survey-results-women-archaeology-podcast/
 
 * Slotten, C. (2021). To Slay or Not to Slay: Gender, Liminality, and Choice in Buffy the Vampire Slayer. In R. Gibson and J.M. VanderVeen(eds), Gender, Supernatural Beings, and the Liminality of Death (67-84). Lexington. 
