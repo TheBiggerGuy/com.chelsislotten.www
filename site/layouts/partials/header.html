@@ -1,18 +1,24 @@
 <header>
-  <nav>
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-md">
+    <div class="container">
       <a class="navbar-brand" href="{{ .Site.BaseURL }}">
         <img src="/apple-touch-icon.png" alt="" width="24" height="24" class="d-inline-block align-text-top">
         {{ .Site.Title }}
       </a>
-      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse d-lg-none" id="navbarNav">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          {{ range $page := .Pages }}
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0 nav-pills">
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+            {{ if .HasChildren }}
+                {{ errorf "Child menus are currently not supported: %s" .Path }}
+            {{ end }}
+            {{ $active := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
             <li class="nav-item">
-              <a class="nav-link" href="#{{ anchorize $page.Title }}">{{ $page.Title }}</a>
+              <a class="nav-link{{ if $active }} active{{ end }}" {{ if $active }}aria-current="page"{{ end }} href="{{ .URL }}">{{ .Name }}</a>
             </li>
           {{ end }}
         </ul>

@@ -1,0 +1,11 @@
+<div class="row {{ with .Get 0 }} {{ . }}{{ end }}">
+    {{ with markdownify .Inner }}
+        {{ if in . "\"col\"" }}
+            {{ . }}
+        {{ else }}
+            <div class="col">
+            {{ . }}
+            </div>
+        {{ end }}
+    {{ end }}
+</div>

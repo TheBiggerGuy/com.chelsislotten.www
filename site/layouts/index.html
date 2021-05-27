@@ -1,12 +1,9 @@
 {{ define "main" }}
 
-{{ "<!-- Start single main -->" | safeHTML }}
-{{ .Content }}
-{{ "<!-- End single main -->" | safeHTML }}
-
 <!-- Three columns of text below the carousel -->
-<div class="row bg-primary d-none d-lg-flex py-4">
-  {{ range $page := .Pages }}
+<div class="row homepage-carousel">
+  {{ range $menu := (where .Site.Menus.main "Page" "!=" nil) }}
+    {{ $page := $menu.Page }}
     {{ $image_name := $page.Params.image }}
     {{ $image := $page.Resources.GetMatch $image_name }}
     {{ if ne $image.ResourceType "image" }}{{ errorf "Image ResourceType not jpg: %s %s" .Path $image.ResourceType }}{{ end }}
@@ -19,45 +16,28 @@
       </picture>
     </div><!-- /.col-lg-4 -->
   {{ end }}
-  {{ range $page := .Pages }}
+  {{ range $menu := (where .Site.Menus.main "Page" "!=" nil) }}
+    {{ $page := $menu.Page }}
     <div class="col-lg-4 text-secondary">
       <h2>{{ $page.Title }}</h2>
       <p>{{ $page.Description }}</p>
     </div><!-- /.col-lg-4 -->
   {{ end }}
-  {{ range $page := .Pages }}
+  {{ range $menu := (where .Site.Menus.main "Page" "!=" nil) }}
+    {{ $page := $menu.Page }}
     <div class="col-lg-4 text-secondary">
       <div class="align-text-bottom h-100">
-        <a class="btn btn-info align-text-bottom" href="#{{ anchorize $page.Title }}" role="button">View details &raquo;</a>
+        <a class="btn btn-info align-text-bottom" href="{{ $page.Permalink }}" role="button">View details &raquo;</a>
       </div>
     </div><!-- /.col-lg-4 -->
   {{ end }}
 </div><!-- /.row -->
 
-<hr class="featurette-divider d-none d-lg-flex">
 
-<!-- START THE FEATURETTES -->
-{{ range $index, $page := .Pages }}
-  {{ $image_name := $page.Params.image }}
-  {{ $image := $page.Resources.GetMatch $image_name }}
-  {{ if ne $image.ResourceType "image" }}{{ errorf "Image ResourceType not jpg: %s %s" .Path $image.ResourceType }}{{ end }}
-  {{ $image_resized_jpg := $image.Fit "500x500 jpg" }}
-  {{ $image_resized_webp := $image.Fit "500x500 webp q80" }}
-  <div class="row featurette" id="{{ anchorize $page.Title }}">
-    <div class="col-md-5 {{if (modBool $index 2)}}order-md-2{{end}} mb-2">
-      <picture>
-        <source srcset="{{ $image_resized_webp.Permalink }}" type="image/webp">
-        <img class="img-fluid mx-auto border border-primary border-3" src="{{ $image_resized_jpg.Permalink }}" {{with $page.Params.image_alt}}alt="{{.}}"{{end}} width="500" height="500">
-      </picture>
-    </div>
-    <div class="col-md-7 {{if (modBool $index 2)}}order-md-1{{end}}">
-      <h2 class="featurette-heading">{{ $page.Params.subtitle }}</h2>
-      {{ $page.Content }}
-    </div>
-  </div>
-
-  <hr class="featurette-divider">
-{{ end }}
-<!-- /END THE FEATURETTES -->
+<div class="row d-block">
+{{ "<!-- Start single main -->" | safeHTML }}
+{{ .Content }}
+{{ "<!-- End single main -->" | safeHTML }}
+</div>
 
 {{ end }}

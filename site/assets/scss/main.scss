@@ -10,7 +10,7 @@ $secondary: $chelsi-gray;
 $info: $chelsi-orange;
 
 $body-bg: $chelsi-gray;
-$body-color: $chelsi-orange;
+$body-color: $chelsi-blue; //$chelsi-orange;
 
 $navbar-dark-brand-color: $chelsi-orange;
 $navbar-dark-brand-hover-color: rgba($chelsi-orange, .9);
@@ -25,7 +25,7 @@ $navbar-dark-brand-hover-color: rgba($chelsi-orange, .9);
 @import "../../../bootstrap/scss/images";
 @import "../../../bootstrap/scss/containers";
 @import "../../../bootstrap/scss/grid";
-// @import "../../../bootstrap/scss/tables";
+@import "../../../bootstrap/scss/tables";
 // @import "../../../bootstrap/scss/forms";
 @import "../../../bootstrap/scss/buttons";
 @import "../../../bootstrap/scss/transitions";
@@ -33,7 +33,7 @@ $navbar-dark-brand-hover-color: rgba($chelsi-orange, .9);
 // @import "../../../bootstrap/scss/button-group";
 @import "../../../bootstrap/scss/nav";
 @import "../../../bootstrap/scss/navbar";
-// @import "../../../bootstrap/scss/card";
+@import "../../../bootstrap/scss/card";
 // @import "../../../bootstrap/scss/accordion";
 // @import "../../../bootstrap/scss/breadcrumb";
 // @import "../../../bootstrap/scss/pagination";
@@ -46,7 +46,7 @@ $navbar-dark-brand-hover-color: rgba($chelsi-orange, .9);
 // @import "../../../bootstrap/scss/modal";
 // @import "../../../bootstrap/scss/tooltip";
 // @import "../../../bootstrap/scss/popover";
-// @import "../../../bootstrap/scss/carousel";
+@import "../../../bootstrap/scss/carousel";
 // @import "../../../bootstrap/scss/spinners";
 // @import "../../../bootstrap/scss/offcanvas";
 
@@ -80,8 +80,6 @@ $large-pad: 4rem;
 }
 
 body {
-  padding-top: ($large-pad * 1.6);
-  padding-bottom: ($large-pad * 0.5);
   color: $chelsi-blue;
 }
 
@@ -100,44 +98,169 @@ header {
     @extend .bg-primary;
     @extend .fixed-top;
   }
+
+  @extend .mb-5;
 }
 
-
-/* MARKETING CONTENT
+/* HOMEPAGE CONTENT
 -------------------------------------------------- */
 
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  text-align: center;
-}
-.marketing h2 {
-  font-weight: 400;
-}
-.marketing .col-lg-4 p {
-  margin-right: .75rem;
-  margin-left: .75rem;
+.homepage-carousel {
+  @extend .bg-primary;
+  @extend .d-none;
+  @extend .d-lg-flex;
+  @extend .py-4;
+  @extend .mb-4;
+  @extend .text-center;
 }
 
 
-/* Featurettes
-------------------------- */
-
-.featurette-divider {
-  margin: $large-pad 0; /* Space out the Bootstrap <hr> more */
-}
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -.05rem;
-}
-
-/* RESPONSIVE CSS
+/* PORTFOLIO CONTENT
 -------------------------------------------------- */
 
-@media (min-width: 40em) {
-  .featurette-heading {
-    font-size: 50px;
+.portfolio-cols {
+  @extend .d-flex;
+  @extend .g-5;
+
+  @include row-cols(1);
+  @include media-breakpoint-up(md) {
+    @include row-cols(2);
+  }
+  @include media-breakpoint-up(xl) {
+    @include row-cols(3);
+  }
+}
+
+.portfolio-col {
+  @extend .card-group;
+
+  a {
+    text-decoration: none;
+  }
+
+  @include media-breakpoint-up(md) {
+    .card-text {
+      visibility: hidden !important;
+    }
+
+    &:hover {
+      .card-text {
+        visibility: visible !important;
+      }
+    }
+  }
+}
+
+.portfolio {
+   .portfolio-hover {
+      visibility: hidden !important;
+   }
+   .portfolio-default {
+      visibility: visible !important;
+   }
+   &:hover {
+     .portfolio-hover {
+        visibility: visible !important;
+     }
+     .portfolio-default {
+        visibility: hidden !important;
+     }
+   }
+}
+
+.portfolio-single {
+  @extend .d-block;
+
+  .row-stripped {
+    background-color: $chelsi-gray;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -9999px;
+      right: 0;
+      z-index: -1;
+    }
+    &:nth-of-type(even) {
+      background-color: $chelsi-gray;
+      &::before {
+        border-left: 9999px solid $chelsi-gray;
+        box-shadow: 9999px 0 0 $chelsi-gray;
+      }
+    }
+    &:nth-of-type(odd) {
+      background-color: $white;
+      &::before {
+        border-left: 9999px solid $white;
+        box-shadow: 9999px 0 0 $white;
+      }
+    }
+  }
+}
+
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: masonry;
+}
+
+.auto-height {
+  height: auto;
+}
+
+.bullet {
+  color: $chelsi-orange;
+  @extend .fs-1;
+}
+
+.p-img-fluid {
+  img {
+    @extend .img-fluid;
+  }
+}
+
+.tr-text-center {
+  tbody tr {
+    @extend .text-center;
+    @extend .align-middle;
+  }
+}
+
+/* .tr-first-col {
+  tbody {
+    background-color: green;
+    tr::nth-of-type(1) {
+      color: red;
+    }
+  }
+} */
+
+.top-header {
+  @extend .bg-primary;
+  
+  @extend .d-flex;
+  
+  @extend .py-4;
+  @extend .mb-4;
+  @extend .p-lg-5;
+  
+  @extend .mx-auto;
+
+  @extend .text-center;
+  @extend .text-secondary;
+
+  h1 {
+    @extend .display-4;
+    @extend .fw-normal;
+  }
+
+  p {
+    @extend .my-0;
+    @extend .fw-normal;
+    @extend .lead;
+    @extend .px-2;
   }
 }
