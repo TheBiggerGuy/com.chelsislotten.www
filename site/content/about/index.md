@@ -21,6 +21,9 @@ image_alt: "Headshot of Chelsi"
 <p class="lead">
 	Feel free to reach out!
 </p>
+<p>
+	<a role="button" class="btn btn-info px-5" href="/cv.pdf">My CV</a>
+</p>
 <p class="lead">
 	<em>~ Chelsi</em>
 </p>
