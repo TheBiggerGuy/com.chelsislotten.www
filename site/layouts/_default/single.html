@@ -1,5 +1,31 @@
 {{ define "main" }}
 {{ "<!-- Start single main -->" | safeHTML }}
-{{ .Content }}
+
+{{ $page := . }}
+
+<div class="row">
+  <div class="col col-8">
+    <div class="row top-header">
+      <h1>{{ default $page.Description $page.Params.subtitle }}</h1>
+    </div>
+    <div class="row">
+      {{ $page.Content }}
+    </div>
+  </div>
+  <div class="col col-4">
+    {{ with $page.Params.image }}
+      {{ $image_name := . }}
+      {{ $image := $page.Resources.GetMatch $image_name }}
+      {{ if ne $image.ResourceType "image" }}{{ errorf "Image ResourceType not jpg: %s %s" .Path $image.ResourceType }}{{ end }}
+      {{ $image_resized_jpg := $image.Fit "500x500 jpg" }}
+      {{ $image_resized_webp := $image.Fit "500x500 webp q80" }}
+      <picture>
+        <source srcset="{{ $image_resized_webp.Permalink }}" type="image/webp">
+        <img class="img-fluid border border-primary border-3" src="{{ $image_resized_jpg.Permalink }}" {{with $page.Params.image_alt}}alt="{{.}}"{{end}} width="500" height="500">
+      </picture>
+    {{ end }}
+  </div>
+</div>
+
 {{ "<!-- End single main -->" | safeHTML }}
 {{ end }}

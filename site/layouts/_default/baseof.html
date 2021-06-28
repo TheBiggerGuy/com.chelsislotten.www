@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ .Site.Title }}</title>
+    <title>{{ .Site.Title }}{{ with .Page.Title }} - {{ . }}{{ end }}</title>
     <meta name="description" content="{{ $.Site.Params.description }}">
     <meta name="author" content="Chelsi Slotten">
     <link rel="icon" href="favicon.ico">
@@ -28,29 +28,20 @@
     {{ partial "header.html" . }}
     {{ "<!-- End header -->" | safeHTML }}
 
-    <main role="main">
 
-      <!-- Marketing messaging and featurettes
-      ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
-
-      <div class="container marketing">
-
-          {{ "<!-- Start main -->" | safeHTML }}
-          {{- block "main" . }}{{- end }}
-          {{ "<!-- End main -->" | safeHTML }}
-
-      </div><!-- /.container -->
-
-
-      {{ "<!-- Start header -->" | safeHTML }}
-      {{ partial "footer.html" . }}
-      {{ "<!-- End header -->" | safeHTML }}
-
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+    <main role="main" class="container clearfix">
+      {{ "<!-- Start main -->" | safeHTML }}
+      {{- block "main" . }}{{- end }}
+      {{ "<!-- End main -->" | safeHTML }}
     </main>
 
+    {{ "<!-- Start footer -->" | safeHTML }}
+    {{ partial "footer.html" . }}
+    {{ "<!-- End footer -->" | safeHTML }}
+
     <!-- Bootstrap core JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta3/js/bootstrap.bundle.min.js" integrity="sha512-DSdiuNZtfUhehZHXtit9Sa/83i06YSnvT8Js8drwdkVCDMk3JwpIxdhf2oRUByUDB3wguN2iAzoTNfxFAuqGyA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha512-a6ctI6w1kg3J4dSjknHj3aWLEbjitAXAjLDRUxo2wyYmDFRcz2RJuQr5M3Kt8O/TtUSp8n2rAyaXYy1sjoKmrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     {{ template "_internal/google_analytics_async.html" . }}
   </body>
 </html>
