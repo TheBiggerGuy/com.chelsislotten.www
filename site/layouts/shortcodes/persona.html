@@ -1,0 +1,28 @@
+{{-
+  $images := dict
+    "Old Man Avatar" "svg/noun_Old Man Avatar_2643376.svg"
+    "Avatar man" "svg/noun_Avatar_man_3345340.svg"
+    "Avatar girl" "svg/noun_Avatar_girl_3345335.svg"
+    "Female Sientist" "svg/noun_Female Scientist_3841948.svg"
+    "girl child avatar" "svg/noun_girl_child_avatar_2509974.svg"
+    "teacher avatar" "svg/noun_teacher_avatar_2509967.svg"
+}}
+{{- $image_name := index $images (.Get 0) }}
+{{- $img := resources.Get $image_name }}
+<div class="card portfolio-persona" style="max-width: 540px;">
+   <div class="row g-0">
+      <div class="col-4"><!-- col-md-4 -->
+         <div class="img-wrap">
+            <img src="{{ $img.Permalink }}" alt="{{ .Get 0 }}">
+         </div>
+      </div>
+      <div class="col-8"><!-- col-md-8 -->
+         <div class="card-body">
+            <h5 class="card-title">{{ .Get 1 }}</h5>
+            <div class="card-text">
+               {{ .Inner | markdownify }}
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

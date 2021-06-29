@@ -66,12 +66,22 @@ Plotting the priority and effort of making the changes helped to decide which ch
 
 {{% row "row-stripped py-4" %}}
 ## Personas
+{{< persona "Avatar girl" "Primary" >}}
+* Name: Hillary
+* Age: 32
+* Occupation: Archaeologist
 
-![Persona for Hillary a 32 year old archaeologist](Primary_user.png)
-{.p-img-fluid}
-![Persona for Joe and 26 year old history teacher](Secondary_user.png)
-{.p-img-fluid}
-{{% /row %}}
+Hillary is an archaeologist who spends a lot of time commuting to different field sites. She enjoys listening to podcasts while she drives, but wishes she saw herself represented in the hosts.
+{{</ persona >}}
+
+{{< persona "Avatar man" "Primary" >}}
+* Name: Joe
+* Age: 26
+* Occupation: History Teacher
+
+Joe has been a teacher for 4 years and is always on the lookout for new ways to help his students engage in the past. He loves learning about niche areas but struggles to find good sources for those niche topics.
+{{</ persona >}}
+{{</ row >}}
 
 
 {{% row "row-stripped py-4" %}}
