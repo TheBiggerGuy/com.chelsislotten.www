@@ -21,7 +21,9 @@ googleAnalytics = "UA-132436004-1"
 [author]
     displayName = "Chelsi Slotten"
     [social]
-        twitter = "osteoarchaeo"
+        twitter = "DrChelsi"
+        linkedin = "chelsi-slotten-664b1142"
+        researchgate = "Chelsi-Slotten"
 
 # Disable all third party for GDPR
 [privacy]
