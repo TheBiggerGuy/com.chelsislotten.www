@@ -10,7 +10,7 @@ image_alt: "Women in Archaeology logo"
 
 ---
 
-Who We Are: We are four women, plus guests, who saw the need for better female representation in archaeological media and decided to do something about it.
+Who We Are: Four women, plus guests, who saw the need for better female representation in archaeological media and decided to do something about it.
 
 What We Do: The goal of this Blog and it's related Podcast is to provide information about the field of Archaeology from the perspective of the women who work in it.\
 {{< a-button "https://womeninarchaeology.com/" >}}Listen{{</ a-button >}}
