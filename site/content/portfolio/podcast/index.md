@@ -82,7 +82,7 @@ Speed up the website load time
 ![Screenshot of the lighthouse performance score for the homepage. The score is 92.](performance_score.png)
 {.p-img-fluid}
 
-By updating the homepage I drastically improved the performance of the website. I also removed unused widgets, optimized image sizes, and reevaluated some of the plugins on the site to ensure these gains were seen site wide.
+By updating the homepage I drastically improved the performance of the website.  I utilized Lighthouse in Chrome DevTools to identify areas for improvement. I also removed unused widgets, optimized image sizes, and reevaluated some of the plugins on the site to ensure these gains were seen site wide. 
 {{</ row >}}
 
 
@@ -118,7 +118,7 @@ Prioritize accessibility in the design
 ![Screenshot of the lighthouse accessibility score for the homepage. The score is 96.](accessibility_score.png)
 {.p-img-fluid}
 
-While redesigning the homepage I focused on ensuring our content was as accessible as possible. I ensured that all images have alt text, a practice we already employed, used color contrast checking services to ensure our text was easily readable, and improved the header to improve accessibility as previously described. We are also continuing to improve our accessibility by creating transcripts for our episodes.
+While redesigning the homepage I focused on ensuring our content was as accessible as possible. I ensured that all images have alt text, a practice we already employed, used color contrast checking services to ensure our text was easily readable, and improved the header to improve accessibility as previously described. I utilized Lighthouse in Chrome DevTools to identify other areas of improvement throughout the site as well. We are also continuing to improve our accessibility by creating transcripts for our episodes.
 {{</ row >}}
 
 
