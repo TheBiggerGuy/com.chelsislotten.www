@@ -18,6 +18,6 @@ I studied at American University where I completed a PhD in Anthropology in 2020
 
 Feel free to reach out!
 
-{{< a-button "/cv.pdf" >}}My CV{{</ a-button >}}
-
 _~ Chelsi_
+
+{{< a-button "/cv.pdf" >}}My CV{{</ a-button >}}
