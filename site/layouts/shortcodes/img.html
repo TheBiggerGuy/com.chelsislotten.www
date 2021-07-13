@@ -4,5 +4,13 @@
 {{ $alt := default (.Inner | markdownify | plainify) (.Get "alt") }}
 {{ $class := default "img-fluid" (.Get "class") }}
 
-{{ partial "img.html" (dict "src" $photo_resource "width" (.Get "width") "height" (.Get "height") "alt" $alt "method" "Fit" "class" $class "orientation" (.Get "orientation")) }}
+{{ partial "img.html" (dict
+	"src" $photo_resource
+	"width" (.Get "width")
+	"height" (.Get "height")
+	"alt" $alt
+	"method" "Fit"
+	"class" $class
+	"orientation" (.Get "orientation")
+	) }}
 <!-- img -->
