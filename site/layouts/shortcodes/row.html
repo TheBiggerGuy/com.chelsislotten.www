@@ -1,6 +1,6 @@
 <div class="row {{ with .Get 0 }} {{ . }}{{ end }}">
     {{ with markdownify .Inner }}
-        {{ if in . "\"col\"" }}
+        {{ if findRE "class=\"col(-[^\" ]*)(\"| )" . }}
             {{ . }}
         {{ else }}
             <div class="col">
