@@ -102,6 +102,23 @@ header {
   @extend .mb-5;
 }
 
+
+/* FOOTER
+-------------------------------------------------- */
+
+footer {
+  svg {
+    width: 48px;
+    height: 48px;
+    fill: $chelsi-blue;
+  }
+
+  li {
+    @extend .px-2;
+  }
+}
+
+
 /* HOMEPAGE CONTENT
 -------------------------------------------------- */
 
