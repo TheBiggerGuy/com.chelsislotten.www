@@ -55,3 +55,7 @@ googleAnalytics = "UA-132436004-1"
 
 [params]
     description = "Dr Chelsi Slotten: anthropologist, researcher, and accessibility advocate."
+
+[module]
+    [[module.imports]]
+        path = "github.com/gohugoio/hugo-mod-bootstrap-scss-v5"
