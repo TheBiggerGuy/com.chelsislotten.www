@@ -1,7 +1,7 @@
 # Build, test and deploy website via Travis
 
 os: linux
-dist: xenial
+dist: focal
 language: generic
 
 branches:
@@ -11,8 +11,13 @@ branches:
 
 env:
   global:
-    - HUGO_VERSION=0.84.4
-    - HUGO_HASH=db608b641e04026c39555099e4b10fa0e38a3d44c320a08dc4bb9f127ea518a1
+    - HUGO_VERSION=0.85.0
+    - HUGO_HASH=26e1656dc77b49011a9c859fc90648a8f457af4f68e0f641a3a7a7210952e0af
+
+addons:
+  apt:
+    packages:
+    - golang
 
 before_install:
   # Set to fail on errors
