@@ -14,9 +14,6 @@
       <div class="card">
         {{ with (index (sort (.Resources.ByType "image") "Name") 0) }}
           {{ partial "img.html" (dict "src" . "width" "500" "height" "500" "method" "Fit" "class" "card-img-top auto-height") }}
-        {{ else }}
-          {{ $image := print "https://via.placeholder.com/500x500/808080/002E5D/.png?text=" .Title }}
-          <img class="card-img-top auto-height" src="{{ $image }}">
         {{ end }}
         <div class="card-body">
           <h2 class="card-title"><a class="stretched-link" href="{{ .Permalink }}">{{ .Title }}</a></h2>
