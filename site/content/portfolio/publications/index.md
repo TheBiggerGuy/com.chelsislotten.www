@@ -4,9 +4,9 @@ description: "List of published works"
 date: 2019-01-14T14:38:43+01:00
 
 ---
-{{< row "top-header" >}}
+{{% row "top-header" %}}
 # Publications
-{{</ row >}}
+{{% /row %}}
 
 * Slotten, C. (2021, May 25). WHA- 5 Years Already?! [Blog post]. Retrieved from https://womeninarchaeology.com/2021/05/25/5-years-wia/
 

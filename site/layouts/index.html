@@ -1,40 +1,42 @@
-{{ define "main" }}
+{{- define "main" }}
 
 <!-- Three columns of text below the carousel -->
 <div class="row homepage-carousel">
-  {{ range $menu := (where .Site.Menus.main "Page" "!=" nil) }}
-    {{ $page := $menu.Page }}
-    {{ $image_name := $page.Params.image }}
-    {{ $image := $page.Resources.GetMatch $image_name }}
-    {{ if ne $image.ResourceType "image" }}{{ errorf "Image ResourceType not jpg: %s %s" .Path $image.ResourceType }}{{ end }}
-    {{ $image_resized_jpg := $image.Fit "140x140 jpg" }}
-    {{ $image_resized_webp := $image.Fit "140x140 webp q80" }}
+  {{- range $menu := (where .Site.Menus.main "Page" "!=" nil) }}
+    {{- $page := $menu.Page }}
+    {{- $image_name := $page.Params.image }}
+    {{- $image := $page.Resources.GetMatch $image_name }}
     <div class="col-lg-4 text-secondary">
-      <picture>
-        <source srcset="{{ $image_resized_webp.Permalink }}" type="image/webp">
-        <img class="rounded-circle" src="{{ $image_resized_jpg.Permalink }}" {{with $page.Params.image_alt}}alt="{{.}}"{{end}} width="140" height="140">
-      </picture>
+      {{- partial "img.html" (dict
+        "src" $image
+        "alt" $page.Params.image_alt
+        "width" "140"
+        "height" "140"
+        "method" "Fit"
+        "class" "rounded-circle"
+        )
+      }}
     </div><!-- /.col-lg-4 -->
-  {{ end }}
-  {{ range $menu := (where .Site.Menus.main "Page" "!=" nil) }}
-    {{ $page := $menu.Page }}
+  {{- end }}
+  {{- range $menu := (where .Site.Menus.main "Page" "!=" nil) }}
+    {{- $page := $menu.Page }}
     <div class="col-lg-4 text-secondary">
       <h2>{{ $page.Title }}</h2>
       <p>{{ $page.Description }}</p>
     </div><!-- /.col-lg-4 -->
-  {{ end }}
-  {{ range $menu := (where .Site.Menus.main "Page" "!=" nil) }}
-    {{ $page := $menu.Page }}
+  {{- end }}
+  {{- range $menu := (where .Site.Menus.main "Page" "!=" nil) }}
+    {{- $page := $menu.Page }}
     <div class="col-lg-4 text-secondary">
       <div class="align-text-bottom h-100">
         <a class="btn btn-info align-text-bottom" href="{{ $page.Permalink }}" role="button">View details &raquo;</a>
       </div>
     </div><!-- /.col-lg-4 -->
-  {{ end }}
+  {{- end }}
 </div><!-- /.row -->
 
 {{ "<!-- Start single main -->" | safeHTML }}
 {{ .Content }}
 {{ "<!-- End single main -->" | safeHTML }}
 
-{{ end }}
+{{- end }}

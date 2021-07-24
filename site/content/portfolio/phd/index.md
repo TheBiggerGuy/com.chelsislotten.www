@@ -4,10 +4,10 @@ description: "Daughters of Freya, Sons of Odin: Gendered Lives during the Viking
 date: 2019-01-14T14:38:43+01:00
 
 ---
-{{< row "top-header" >}}
+{{% row "top-header" %}}
 # PhD
 Daughters of Freya, Sons of Odin: Gendered Lives during the Viking Age
-{{</ row >}}
+{{% /row %}}
 
 
 ## Abstract

@@ -4,9 +4,9 @@ description: "List of presentations"
 date: 2019-01-14T14:38:43+01:00
 
 ---
-{{< row "top-header" >}}
+{{% row "top-header" %}}
 # Presentations
-{{</ row >}}
+{{% /row %}}
 
 * Slotten, C. (2019, April). Care in the Viking Age. Paper presented at the annual meeting of the Society for American Archaeology, Albuquerque, NM.
 
