@@ -39,34 +39,34 @@ After interviewing the users I discovered that they really liked the gamificatio
 
 {{% col %}}
 <div id="gettingStartedCarouselIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#gettingStartedCarouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#gettingStartedCarouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#gettingStartedCarouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <button type="button" data-bs-target="#gettingStartedCarouselIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="wireframes.02.png" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="wireframes.03.png" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="wireframes.04.png" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="wireframes.06.png" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#gettingStartedCarouselIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#gettingStartedCarouselIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+   <div class="carousel-indicators">
+      <button type="button" data-bs-target="#gettingStartedCarouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#gettingStartedCarouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#gettingStartedCarouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#gettingStartedCarouselIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+   </div>
+   <div class="carousel-inner">
+      <div class="carousel-item active">
+         {{< img src="wireframes.02.png" class="d-block w-100" alt="..." width="2048" height="1024" />}}
+   </div>
+      <div class="carousel-item">
+         {{< img src="wireframes.03.png" class="d-block w-100" alt="..." width="2048" height="1024" />}}
+   </div>
+      <div class="carousel-item">
+         {{< img src="wireframes.04.png" class="d-block w-100" alt="..." width="2048" height="1024" />}}
+   </div>
+      <div class="carousel-item">
+         {{< img src="wireframes.06.png" class="d-block w-100" alt="..." width="2048" height="1024" />}}
+   </div>
+   </div>
+   <button class="carousel-control-prev" type="button" data-bs-target="#gettingStartedCarouselIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+   </button>
+   <button class="carousel-control-next" type="button" data-bs-target="#gettingStartedCarouselIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+   </button>
 </div>
 {{% /col %}}
 {{% /row %}}

@@ -1,42 +1,52 @@
 <!-- img -->
-{{ $photo_resource := .src }}
-{{ $method := default "Fill" .method }}
-{{ $width := default "" .width }}
-{{ $height := default "" .height }}
-{{ $quality := default "q83" .quality }}
-{{ $align := default "Smart" .align }}
-{{ $alt := .alt }}
-{{ $class := default "img-fluid" .class }}
+{{- $photo_resource := .src }}
+{{- $method := default "Fill" .method }}
+{{- $width := default "" .width }}
+{{- $height := default "" .height }}
+{{- $quality := default "q83" .quality }}
+{{- $align := default "Smart" .align }}
+{{- $alt := .alt }}
+{{- $class := default "img-fluid" .class }}
 
-{{ $orientation := "r0" }}
-{{ if (isset . "orientation") }}
-    {{ $orientation = .orientation }}
-{{ else }}
-    {{ if or (eq $photo_resource.MediaType.SubType "jpg") (eq $photo_resource.MediaType.SubType "jpeg") }}
-        {{ with $photo_resource.Exif }}
-            {{ if eq .Tags.Orientation 1 }}
-                {{ $orientation = "r0" }}
-            {{ else if eq .Tags.Orientation 8 }}
-                {{ $orientation = "r90" }}
-            {{ else if eq .Tags.Orientation 3 }}
-                {{ $orientation = "r180" }}
-            {{ else if eq .Tags.Orientation 6 }}
-                {{ $orientation = "r270" }}
-            {{ end }}
-        {{ end }}
-    {{ end }}
-{{ end }}
+{{- if ne $photo_resource.ResourceType "image" }}
+   {{- errorf "Image ResourceType not an image: %s %s" $photo_resource.ResourceType }}
+{{- end }}
+
+{{- $orientation := "r0" }}
+{{- if (isset . "orientation") }}
+   {{- $orientation = .orientation }}
+{{- else }}
+   {{- if or (eq $photo_resource.MediaType.SubType "jpg") (eq $photo_resource.MediaType.SubType "jpeg") }}
+      {{- with $photo_resource.Exif }}
+         {{- if eq .Tags.Orientation 1 }}
+            {{- $orientation = "r0" }}
+         {{- else if eq .Tags.Orientation 8 }}
+            {{- $orientation = "r90" }}
+         {{- else if eq .Tags.Orientation 3 }}
+            {{- $orientation = "r180" }}
+         {{- else if eq .Tags.Orientation 6 }}
+            {{- $orientation = "r270" }}
+         {{- end }}
+      {{- end }}
+   {{- end }}
+{{- end }}
 
 <picture>
-    {{ $dim := printf "%sx%s %s %s %s" $width  $height $orientation $align $quality }}
-    {{ $photo_resized := "" }}
-    {{ if eq $method "Resize" }}
-        {{ $photo_resized = $photo_resource.Resize $dim }}
-    {{ else if eq $method "Fit" }}
-        {{ $photo_resized = $photo_resource.Fit $dim }}
-    {{ else if eq $method "Fill" }}
-        {{ $photo_resized = $photo_resource.Fill $dim }}
-    {{ end }}
-    <img src="{{ $photo_resized.Permalink }}" {{ with $alt }}alt="{{ . }}"{{ end }} class="{{ $class }}" width="{{ $width }}" height="{{ $height }}" />
+   {{- range $codec := (slice "webp" "jpg") }}
+      {{- $dim := printf "%sx%s %s %s %s %s" $width $height $orientation $align $codec $quality }}
+      {{- $photo_resized := "" }}
+      {{- if eq $method "Resize" }}
+         {{- $photo_resized = $photo_resource.Resize $dim }}
+      {{- else if eq $method "Fit" }}
+         {{- $photo_resized = $photo_resource.Fit $dim }}
+      {{- else if eq $method "Fill" }}
+         {{- $photo_resized = $photo_resource.Fill $dim }}
+      {{- end }}
+      {{- if eq $codec "webp" }}
+         <source srcset="{{ $photo_resized.Permalink }}" type="image/webp" />
+      {{- else }}
+         <img src="{{ $photo_resized.Permalink }}" {{ with $alt }}alt="{{ . }}"{{ end }} class="{{ $class }}" width="{{ $photo_resized.Width }}" height="{{ $photo_resized.Height }}" />
+      {{- end }}
+   {{- end }}
 </picture>
 <!-- img -->
