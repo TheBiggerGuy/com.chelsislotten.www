@@ -218,6 +218,28 @@ footer {
   }
 }
 
+.portfolio-persona {
+  @extend .mb-3;
+
+
+  .img-wrap {
+    @extend .ratio;
+    @extend .ratio-1x1;
+
+    @extend .rounded-circle;
+
+    background-color: $chelsi-orange;
+
+    img {
+      @extend .p-3;
+    }
+  }
+
+  ul {
+    @extend .list-unstyled;
+  }
+}
+
 .img-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -231,6 +253,7 @@ footer {
 .bullet {
   color: $chelsi-orange;
   @extend .fs-1;
+  @extend .fw-bold;
 }
 
 .p-img-fluid {

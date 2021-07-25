@@ -58,10 +58,23 @@ Competitors provide books ranging from the popular to the indy. One store has a 
 
 {{% row "row-stripped py-4" %}}
 ## Personas
-![Persona for Betty a 33 year old FDA scientist](Primary_persona.png)
-{.p-img-fluid}
-![Persona for Paul a 63 year old retired factory manager](secondary_persona.png)
-{.p-img-fluid}
+{{% persona "Female Sientist" "Primary" %}}
+* Name: Betty
+* Age: 33
+* Occupation: FDA Scientist
+
+Betty is a scientist for the FDA. She works long hours and is planning a wedding. She enjoys escaping into a good book, but wishes it was easier to find good books and check out quickly.
+She is often frustrated when she buys duplicate books and wishes websites would tell you if you have already purchased a book.
+{{% /persona %}}
+
+{{% persona "Old Man Avatar" "Primary" %}}
+* Name: Paul
+* Age: 63
+* Occupation: Retired
+
+Paul is a retired factory manager for Ford. He likes to read to fill the time and socializes through his weekly book club.
+He is frustrated with online book shopping because the buttons are not clear on all the sites. Furthermore, he likes talking to staff to get suggestions on what to read next, and he can’t do that online.
+{{% /persona %}}
 {{% /row %}}
 
 {{% row "row-stripped py-4" %}}

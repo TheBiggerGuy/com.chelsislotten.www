@@ -90,10 +90,21 @@ I noted that other museums have produced both online collections that can be acc
 
 {{% row "row-stripped py-4" %}}
 ## Personas
-![Persona for Michael a 34 year old history teacher](primary_user_persona.png)
-{.p-img-fluid}
-![Persona for Pernille a 10 year old Danish student](secondary_user_personna.png)
-{.p-img-fluid}
+{{% persona "teacher avatar" "Primary" %}}
+* Name: Michael
+* Age: 34
+* Occupation: History Teacher
+
+Michael has been a teacher for 12 years and has found the switch to remote learning difficult. It is harder to keep students focused and hit favorite, most engaging activities, like museum field trips, are not longer possible. He is looking for other ways to engage hi students in the material.
+{{% /persona %}}
+
+{{% persona "girl child avatar" "Secondary" %}}
+* Name: Pernille
+* Age: 10
+* Occupation: Student
+
+Pernille is originally from Denmark. Her family moved to the UK 1.5 years ago. She is working on her English, but she doesn't always understand her teachers. As she moved just before COVID, she has not had a chance to meet most of her classmates in person.
+{{% /persona %}}
 {{% /row %}}
 
 
