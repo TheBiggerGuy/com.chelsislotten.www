@@ -9,7 +9,7 @@
 {{- $class := default "img-fluid" .class }}
 
 {{- if ne $photo_resource.ResourceType "image" }}
-   {{- errorf "Image ResourceType not an image: %s %s" $photo_resource.ResourceType }}
+   {{- errorf "Image ResourceType not an image: %s %s" $photo_resource $photo_resource.ResourceType }}
 {{- end }}
 
 {{- $orientation := "r0" }}

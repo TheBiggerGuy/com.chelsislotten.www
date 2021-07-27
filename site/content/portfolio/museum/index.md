@@ -47,16 +47,16 @@ After interviewing the users I discovered that they really liked the gamificatio
    </div>
    <div class="carousel-inner">
       <div class="carousel-item active">
-         {{< img src="wireframes.02.png" class="d-block" alt="..." width="2048" height="1024" />}}
+         {{< img src="wireframes.02.png" class="d-block" alt="pen and paper wireframes" width="2048" height="1024" />}}
    </div>
       <div class="carousel-item">
-         {{< img src="wireframes.03.png" class="d-block" alt="..." width="2048" height="1024" />}}
+         {{< img src="wireframes.03.png" class="d-block" alt="pen and paper wireframes" width="2048" height="1024" />}}
    </div>
       <div class="carousel-item">
-         {{< img src="wireframes.04.png" class="d-block" alt="..." width="2048" height="1024" />}}
+         {{< img src="wireframes.04.png" class="d-block" alt="preliminary information architecture sketch" width="2048" height="1024" />}}
    </div>
       <div class="carousel-item">
-         {{< img src="wireframes.06.png" class="d-block" alt="..." width="2048" height="1024" />}}
+         {{< img src="wireframes.06.png" class="d-block" alt="pen and paper wireframes" width="2048" height="1024" />}}
    </div>
    </div>
    <button class="carousel-control-prev" type="button" data-bs-target="#gettingStartedCarouselIndicators" data-bs-slide="prev">
