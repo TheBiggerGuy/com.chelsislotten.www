@@ -5,3 +5,7 @@ site/resources
 
 *.sublime-project
 *.sublime-workspace
+
+# Windows
+desktop.ini
+*.exe

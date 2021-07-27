@@ -95,7 +95,7 @@ As I was primarily interested in designing the user journey for finding and purc
 
 {{% row "row-stripped py-4" %}}
 ## Prototype
-I created a High Fidelity Prototype of my design to help users fully immerse themselves in the experience and explain the value to stakeholders. You can explore the full user flow with Adobe XD.
+I created a High Fidelity Prototype of my design to help users fully immerse themselves in the experience and explain the value to stakeholders. You can explore the full user flow with [AdobeXD](https://xd.adobe.com/view/fc2ffe01-29d2-4867-98ec-20e2eae85f65-a97c/?fullscreen).
 
 ![High fidelity digital wireframes for the bookstore check out process](Hi-fi-Prototype.png)
 {.p-img-fluid}
