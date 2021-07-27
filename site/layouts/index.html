@@ -7,15 +7,17 @@
     {{- $image_name := $page.Params.image }}
     {{- $image := $page.Resources.GetMatch $image_name }}
     <div class="col-lg-4 text-secondary">
-      {{- partial "img.html" (dict
-        "src" $image
-        "alt" $page.Params.image_alt
-        "width" "140"
-        "height" "140"
-        "method" "Fill"
-        "class" "rounded-circle"
-        )
-      }}
+      <a href="{{ $page.Permalink }}">
+        {{- partial "img.html" (dict
+          "src" $image
+          "alt" $page.Params.image_alt
+          "width" "140"
+          "height" "140"
+          "method" "Fill"
+          "class" "rounded-circle"
+          )
+        }}
+      </a>
     </div><!-- /.col-lg-4 -->
   {{- end }}
   {{- range $menu := (where .Site.Menus.main "Page" "!=" nil) }}
