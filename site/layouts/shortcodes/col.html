@@ -1,7 +1,7 @@
-{{- $breakpoint := "" }}
+{{- $breakpoint := "-md" }}
 {{- with .Get "breakpoint" }}
    {{- $breakpoint = printf "-%s" . }}
 {{- end }}
-<div class="{{ with .Get "width" }}col{{ $breakpoint }}-{{ . }}{{ else }}col{{ end }}{{ with .Get 0 }} {{ . }}{{ end }}">
+<div class="{{ with .Get "width" }}col{{ $breakpoint }}-{{ . }}{{ else }}col{{ $breakpoint }}{{ end }}{{ with .Get 0 }} {{ . }}{{ end }}">
    {{ .Inner }}
 </div>
