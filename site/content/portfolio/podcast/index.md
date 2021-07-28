@@ -89,10 +89,14 @@ Joe has been a teacher for 4 years and is always on the lookout for new ways to 
 Speed up the website load time
 {.lead}
 
+{{% col %}}
 ![Screenshot of the lighthouse performance score for the homepage. The score is 92.](performance_score.png)
 {.p-img-fluid}
+{{% /col %}}
 
-By updating the homepage I drastically improved the performance of the website.  I utilized Lighthouse in Chrome DevTools to identify areas for improvement. I also removed unused widgets, optimized image sizes, and reevaluated some of the plugins on the site to ensure these gains were seen site wide. 
+{{% col %}}
+By updating the homepage I drastically improved the performance of the website.  I utilized Lighthouse in Chrome DevTools to identify areas for improvement. I also removed unused widgets, optimized image sizes, and reevaluated some of the plugins on the site to ensure these gains were seen site wide.
+{{% /col %}} 
 {{% /row %}}
 
 
@@ -101,10 +105,14 @@ By updating the homepage I drastically improved the performance of the website. 
 Streamline the homepage
 {.lead}
 
+{{% col %}} 
+In order to improve navigation of the site I created a new homepage that highlights the main areas of the site. I also ensured that the above-the-fold content included a description of what the site is about. I utilized the same pink as is used in our logo for all the headings to ensure brand consistency and clearly delineate the different sections of the page.
+{{% /col %}} 
+
+{{% col %}} 
 ![The updated website homepage with a cleaner look, consistent colors and clearer user flow](WIA_homepage.png)
 {.p-img-fluid}
-
-In order to improve navigation of the site I created a new homepage that highlights the main areas of the site. I also ensured that the above-the-fold content included a description of what the site is about. I utilized the same pink as is used in our logo for all the headings to ensure brand consistency and clearly delineate the different sections of the page.
+{{% /col %}} 
 {{% /row %}}
 
 
@@ -113,10 +121,12 @@ In order to improve navigation of the site I created a new homepage that highlig
 Update the header for easier navigation
 {.lead}
 
+The previous header took up most of the above-the-fold space on the page. Furthermore, the text to background contrast was not very accessible and the navigation bar broke into two lines on some devices. In order to address this I reduced the margin and padding size around the elements contained in the header. I also updated the header template for the theme to change the font color, an option that was not possible without changing the code. I then shortened the navigation titles for clarity and created a call to action to communicate to the user that we would like their support.
+
 ![Updated header with the logo, podcast name, byline, and navigation bar.](Header.png)
 {.p-img-fluid}
 
-The previous header took up most of the above-the-fold space on the page. Furthermore, the text to background contrast was not very accessible and the navigation bar broke into two lines on some devices. In order to address this I reduced the margin and padding size around the elements contained in the header. I also updated the header template for the theme to change the font color, an option that was not possible without changing the code. I then shortened the navigation titles for clarity and created a call to action to communicate to the user that we would like their support.
+
 {{% /row %}}
 
 
@@ -125,10 +135,14 @@ The previous header took up most of the above-the-fold space on the page. Furthe
 Prioritize accessibility in the design
 {.lead}
 
+{{% col %}} 
 ![Screenshot of the lighthouse accessibility score for the homepage. The score is 96.](accessibility_score.png)
 {.p-img-fluid}
+{{% /col %}} 
 
+{{% col %}} 
 While redesigning the homepage I focused on ensuring our content was as accessible as possible. I ensured that all images have alt text, a practice we already employed, used color contrast checking services to ensure our text was easily readable, and improved the header to improve accessibility as previously described. I utilized Lighthouse in Chrome DevTools to identify other areas of improvement throughout the site as well. We are also continuing to improve our accessibility by creating transcripts for our episodes.
+{{% /col %}} 
 {{% /row %}}
 
 
