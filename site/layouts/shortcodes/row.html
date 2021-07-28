@@ -1,7 +1,7 @@
 {{- $classes := .Get 0 }}
 <div class="row{{ with $classes }} {{ . }}{{ end }}">
    {{- with .Inner }}
-      {{- if findRE "class=\"col([^-\" ]*)(\"| )" . }}
+      {{- if findRE "class=\"col([^\" ]*)(\"| |-)" . }}
          {{ . }}
       {{- else }}
    <div class="col">
