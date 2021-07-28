@@ -119,10 +119,14 @@ I created a High Fidelity Prototype of my design, incorporating the feedback fro
 Allow users to search for recipes based on ingredients
 {.lead}
 
+{{% col %}}
 I wanted the user to be able to search for a recipe based on the ingredients they have in their cupboards. Therefore I decided to create a search function that sorts recipes both by ingredients and types of cuisine.
+{{% /col %}}
 
+{{% col %}}
 ![The search screen allows the user to input what ingredients they have and choose what type of cuisine they want to eat.](search_screen.png)
 {.p-img-fluid}
+{{% /col %}}
 {{% /row %}}
 
 
