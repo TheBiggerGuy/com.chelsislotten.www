@@ -31,8 +31,8 @@ The planet is warming and there is an obesity epidemic. This platform will addre
 
 
 {{% row "row-stripped py-4" %}}
-## Getting Started
 {{% col %}}
+## Getting Started
 To start off I asked myself some basic questions.  Who is our primary user? What kind of goals do they have? Why would someone want to use this application? Qualitative research methods are the most useful for answering these types of questions. Therefore, I conducted remote and in-person user interviews to get feedback from my prospective users on these topics.
 {{% /col %}}
 
@@ -115,11 +115,11 @@ I created a High Fidelity Prototype of my design, incorporating the feedback fro
 
 
 {{% row "row-stripped py-4" %}}
+{{% col %}}
 ## Goal 1
 Allow users to search for recipes based on ingredients
 {.lead}
 
-{{% col %}}
 I wanted the user to be able to search for a recipe based on the ingredients they have in their cupboards. Therefore I decided to create a search function that sorts recipes both by ingredients and types of cuisine.
 {{% /col %}}
 
@@ -149,19 +149,20 @@ I really wanted this app to be a one-stop-shop for people to do meal planning, c
 
 
 {{% row "row-stripped py-4" %}}
-## Goal 3
-Allow users to set dietary preferences and allergies in their profile
-{.lead}
-
-{{% col %}}
-As we’re all becoming more aware, there are a variety of food restrictions including allergies, religious restrictions, and preferences that individuals ascribe to.  In order to accommodate these dietary restrictions I decided to add a customization section that allows users to input their preferences for food, as well as the length of time they want to spend cooking.  This customization field can be accessed either through the profile tab to create permanent settings, or thought the search function in case a cook needs to adjust their normal meals for someone with an allergy or dietary restriction.
-{{% /col %}}
-
-
 {{% col %}}
 ![Customization screen with options for the user to input dietary restrictions, allergens, and cook time for the recipe.](customize_page.png)
 {.p-img-fluid}
 {{% /col %}}
+
+{{% col %}}
+## Goal 3
+Allow users to set dietary preferences and allergies in their profile
+{.lead}
+
+As we’re all becoming more aware, there are a variety of food restrictions including allergies, religious restrictions, and preferences that individuals ascribe to.  In order to accommodate these dietary restrictions I decided to add a customization section that allows users to input their preferences for food, as well as the length of time they want to spend cooking.  This customization field can be accessed either through the profile tab to create permanent settings, or thought the search function in case a cook needs to adjust their normal meals for someone with an allergy or dietary restriction.
+{{% /col %}}
+
+
 {{% /row %}}
 
 

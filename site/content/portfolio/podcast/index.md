@@ -85,9 +85,6 @@ Joe has been a teacher for 4 years and is always on the lookout for new ways to 
 
 
 {{% row "row-stripped py-4" %}}
-## Goal 1
-Speed up the website load time
-{.lead}
 
 {{% col %}}
 ![Screenshot of the lighthouse performance score for the homepage. The score is 92.](performance_score.png)
@@ -95,17 +92,21 @@ Speed up the website load time
 {{% /col %}}
 
 {{% col %}}
+## Goal 1
+Speed up the website load time
+{.lead}
+
 By updating the homepage I drastically improved the performance of the website.  I utilized Lighthouse in Chrome DevTools to identify areas for improvement. I also removed unused widgets, optimized image sizes, and reevaluated some of the plugins on the site to ensure these gains were seen site wide.
 {{% /col %}} 
 {{% /row %}}
 
 
 {{% row "row-stripped py-4" %}}
+{{% col %}} 
 ## Goal 2
 Streamline the homepage
 {.lead}
 
-{{% col %}} 
 In order to improve navigation of the site I created a new homepage that highlights the main areas of the site. I also ensured that the above-the-fold content included a description of what the site is about. I utilized the same pink as is used in our logo for all the headings to ensure brand consistency and clearly delineate the different sections of the page.
 {{% /col %}} 
 
@@ -131,9 +132,6 @@ The previous header took up most of the above-the-fold space on the page. Furthe
 
 
 {{% row "row-stripped py-4" %}}
-## Goal 4
-Prioritize accessibility in the design
-{.lead}
 
 {{% col %}} 
 ![Screenshot of the lighthouse accessibility score for the homepage. The score is 96.](accessibility_score.png)
@@ -141,6 +139,10 @@ Prioritize accessibility in the design
 {{% /col %}} 
 
 {{% col %}} 
+## Goal 4
+Prioritize accessibility in the design
+{.lead}
+
 While redesigning the homepage I focused on ensuring our content was as accessible as possible. I ensured that all images have alt text, a practice we already employed, used color contrast checking services to ensure our text was easily readable, and improved the header to improve accessibility as previously described. I utilized Lighthouse in Chrome DevTools to identify other areas of improvement throughout the site as well. We are also continuing to improve our accessibility by creating transcripts for our episodes.
 {{% /col %}} 
 {{% /row %}}
