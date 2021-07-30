@@ -30,8 +30,8 @@ Covid-19 has kept museums closed, depriving students of field trips to learn abo
 
 
 {{% row "row-stripped py-4" %}}
-## Getting Started
 {{% col %}}
+## Getting Started
 To start I asked myself some questions. What makes history engaging? How do I ensure the information is considered trustworthy? And what would be useful to the user?
 
 After interviewing the users I discovered that they really liked the gamification aspect of the app and felt it created a more engaging experience. They also found that they could trust the source, assuming it is a respected museum and their logo is attached to the app. Finally, although individuals liked the app, there were some concerns about simplifying the navigation.
@@ -164,11 +164,11 @@ I really wanted this app to be accessible to people of different abilities and l
 
 
 {{% row "row-stripped py-4" %}}
+{{% col %}}
 ## Goal 3
 Provide multiple avenues for exploration
 {.lead}
 
-{{% col %}}
 In order to promote exploration I created four different ways of interacting with this app. Users can play through create-your-own-adventure stories based on the old books of a similar name. They can also play games to figure out if they have the skills to survive in the past, collect different objects that they can then compare with their friends, or access tours if they are on-site. By provided a variety of different entry points into learning I employed techniques used in Universal Design for Learning to promote engagement and inclusivity in learning design.
 {{% /col %}}
 
@@ -181,9 +181,6 @@ In order to promote exploration I created four different ways of interacting wit
 
 
 {{% row "row-stripped py-4" %}}
-## Goal 4
-Ensure app is trustworthy
-{.lead}
 
 {{% col %}}
 ![Setting screen containing buttons for account, about, language, sound, graphics, and help](settings_screen.png)
@@ -191,6 +188,10 @@ Ensure app is trustworthy
 {{% /col %}}
 
 {{% col %}}
+## Goal 4
+Ensure app is trustworthy
+{.lead}
+
 With the prevalence of fake news and issues surrounding trustworthiness of information sources, I was particularly concerned with making sure the user would trust the information the app was providing. I was worried that the gamification of learning about the past might make the information seem less trustworthy. When I conducted my user research I asked participants about the perceived trustworthiness of the app. The majority of participants said if the app came from a reputed museum and that museum logo was featured prominently on all of the pages they would feel confident in the veracity of the information in the app. As a result, I featured the museum logo at the top of every page. I also included an about page in the settings where users can learn more about who is providing the information to increase transparency and trustworthiness.
 {{% /col %}}
 {{% /row %}}
