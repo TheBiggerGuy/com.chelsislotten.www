@@ -86,6 +86,14 @@ I wanted users to be able to quickly and easily find the information they were l
 {{% /row %}}
 
 {{% row "row-stripped py-4" %}}
+## P & P Wireframes
+I wanted to create a mobile-first design, so I started by creating pen and paper wireframes for the mobile version of the website. I also created one desktop screen to get an idea of how I wanted the website to respond to different screen sizes.
+
+![Pen and paper wireframes for the bookstore check out process app](wireframes07.png)
+{.p-img-fluid}
+{{% /row %}}
+
+{{% row "row-stripped py-4" %}}
 ## Wireframes
 As I was primarily interested in designing the user journey for finding and purchasing a book, those are the sections I wireframed. I created digital wireframes based on my paper wireframes and continued to review what was necessary, unnecessary, and what needed improvement. I spent a lot of time on this step to make sure that the underlying process was as clear as possible before moving on to visuals.
 
