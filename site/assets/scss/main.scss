@@ -87,6 +87,10 @@ a {
   @include enable-word-break;
 }
 
+.row {
+  overflow-x: scroll;
+}
+
 
 /* NAVBAR
 -------------------------------------------------- */
