@@ -158,8 +158,21 @@ Emphasize Accessibility
 
 I really wanted this app to be accessible to people of different abilities and learners at different stages in their education. As a result I made sure there were images associated with most of the text to help tell the story. For users who want to access the material in a different way, I ensured that the objects and tours all had optional audio. I also added the option to change the language of the app for foreign language speakers. The language I used for the copy is also age appropriate for younger visitors, or visitors for whom English is not their first language.
 
-![Collections screens are shown for a map of the Battle of Culloden, a painting of Bonnie Prince Charlie, and the Appin Stewart flag](collectable_screens.png)
+{{% col %}}
+![Collection screen for the Appil Stewart flag](flag.png)
 {.p-img-fluid}
+{{% /col %}}
+
+{{% col %}}
+![Collection screen for a map of the site of the Battle of Culloden.](culloden_map.png)
+{.p-img-fluid}
+{{% /col %}}
+
+{{% col %}}
+![Collection screen for a painting of Bonnie Prince Charlier.](bonnie_prince_charlie.png)
+{.p-img-fluid}
+{{% /col %}}
+
 {{% /row %}}
 
 
